@@ -17,10 +17,3 @@ def softmax(x):
     # Get softmax(x) by dividing x_exp by x_sum element-wise - works due to numpy broadcasting.
     s = x_exp / x_sum
     return s
-
-
-x = np.array([
-    [9, 2, 5, 0, 0],
-    [7, 5, 0, 0, 0]])
-
-print("softmax(x) = " + str(softmax(x)))

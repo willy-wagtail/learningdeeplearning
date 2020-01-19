@@ -10,10 +10,3 @@ def sigmoid_derivative(value):
     s = sigmoid(value)
     ds = s * (1 - s)
     return ds
-
-
-x = np.array([1, 2, 3])
-
-print("sigmoid(x) = " + str(sigmoid(x)))
-
-print("sigmoid_derivative(x) = " + str(sigmoid_derivative(x)))
