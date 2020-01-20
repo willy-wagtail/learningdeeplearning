@@ -12,6 +12,7 @@ def initialize_with_zeros(dim):
 
     Returns:
     w -- initialized vector of shape (dim, 1)
+
     b -- initialized scalar (corresponds to the bias)
     """
 
@@ -135,6 +136,8 @@ def predict(w, b, X):
     #         Y_prediction[0][i] = 0
 
     Y_prediction = np.round(A)
+    # Y_prediction = (A > 0.5)
+
     assert (Y_prediction.shape == (1, m))
     return Y_prediction
 
@@ -183,3 +186,4 @@ def model(X_train, Y_train, X_test, Y_test, num_iterations=2000, learning_rate=0
          "num_iterations": num_iterations}
 
     return d
+
